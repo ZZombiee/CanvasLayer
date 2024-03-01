@@ -87,7 +87,7 @@ abstract class BaseDrawLayerView(context: Context, attrs: AttributeSet?) : View(
         val start = System.currentTimeMillis()
         getLayerBuilder().invoke(mBuild)
         Log.d("测试测量耗时", "${System.currentTimeMillis() - start}")
-        invalidate()
+        requestLayout()
     }
 
 }
